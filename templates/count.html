@@ -1,0 +1,14 @@
+<h1>There are {{count}} words in your text</h1>
+
+<a href="{% url 'home' %}">Enter New Text</a>
+
+<h1>Entered Text:</h1>
+{{entertext}}
+
+<h1>Word Count:</h1>
+{% for word, countwords in sortedwords %}
+
+{{ word }} - {{countwords}}
+<br/>
+
+{% endfor %}
